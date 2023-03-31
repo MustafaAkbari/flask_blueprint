@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User page</title>
+</head>
+<body>
+<h2>This page belong to: {{ name|title }}</h2>
+{% if name == "fatima" %}
+{% set my_list = ['I', 'Love', 'You'] %}
+{% for words in my_list %}
+<ul>
+  <li>{{ words }}</li>
+</ul>
+{% endfor %}
+<h4>{{ name|upper }}</h4>
+{% else %}
+<h3>Welcome to your page {{ name|title }}</h3>
+{% endif %}
+</body>
+</html>
